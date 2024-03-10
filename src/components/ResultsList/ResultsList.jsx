@@ -14,7 +14,6 @@ import "./ResultsList.css";
  */
 export function ResultsList(props) {
   const { className, onSelect, items, ...otherProps } = props;
-
   return (
     <ul className={"ResultsList " + (className || "")} {...otherProps}>
       {items.map(function(item, index) {
@@ -35,5 +34,5 @@ export function ResultsList(props) {
 ResultsList.propTypes = {
   className: PropTypes.string,
   onSelect: PropTypes.func,
-  items: PropTypes.array
+  items: PropTypes.array,
 };

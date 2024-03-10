@@ -31,7 +31,7 @@ export default function App() {
   };
 
   const onSelect = (event) => {
-    setInput(event.target.innerText);
+    setInput(event.name + ', ' + event.state.abbreviation);
     setResult([]);
   };
 
@@ -44,8 +44,8 @@ export default function App() {
         <span className="label">Suburb</span>
         <div className="inputField">
           <Input className="input" onChange={handleOnInputChange} value={userInput} />
-          <Button value={userInput} />
-          <ResultsList items={result} onSelect={onSelect} />
+          <Button userInput={userInput} />
+          <ResultsList items={result} userInput={userInput} onSelect={onSelect} />
         </div>
       </div>
     </section>

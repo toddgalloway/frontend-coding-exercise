@@ -13,10 +13,10 @@ import "./Button.css";
 
  */
 export function Button(props) {
-  const { className, value, ...otherProps } = props;
+  const { className, userInput, ...otherProps } = props;
 
   function showInput () {
-    alert(value);
+    alert(userInput);
   }
 
   return (
@@ -35,5 +35,5 @@ export function Button(props) {
 
 Button.propTypes = {
   className: PropTypes.string,
-  value: PropTypes.string
+  userInput: PropTypes.string
 };
