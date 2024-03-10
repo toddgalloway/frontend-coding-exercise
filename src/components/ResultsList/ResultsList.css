@@ -5,6 +5,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  position: absolute;
 }
 
 .ResultsList .ResultsList-item {
@@ -15,4 +16,6 @@
 
 .ResultsList .ResultsList-item:hover {
   background: #0058cc;
+  color: #fff;
+  cursor: pointer;
 }

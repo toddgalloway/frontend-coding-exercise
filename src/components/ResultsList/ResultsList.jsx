@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from 'prop-types';
 import "./ResultsList.css";
 
 /**
@@ -24,12 +24,16 @@ export function ResultsList(props) {
             className="ResultsList-item"
             onClick={() => onSelect && onSelect(item)}
           >
-            <button className="ResultsList-button">
-              {item.name}, {item.state.abbreviation}
-            </button>
+            {item.name}, {item.state.abbreviation}
           </li>
         );
       })}
     </ul>
   );
 }
+
+ResultsList.propTypes = {
+  className: PropTypes.string,
+  onSelect: PropTypes.func,
+  items: PropTypes.array
+};

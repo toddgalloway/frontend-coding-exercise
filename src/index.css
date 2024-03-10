@@ -40,4 +40,6 @@ section {
   background: hsl(0, 0%, 95%);
   padding: 1rem;
   margin: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
 }

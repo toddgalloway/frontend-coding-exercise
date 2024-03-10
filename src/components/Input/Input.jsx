@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import PropTypes from 'prop-types';
 import "./Input.css";
 
 /**
@@ -39,3 +40,9 @@ export function Input(props) {
     />
   );
 }
+
+Input.propTypes = {
+  className: PropTypes.string,
+  onChange: PropTypes.func,
+  value: PropTypes.string
+};
